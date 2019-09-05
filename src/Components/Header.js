@@ -11,10 +11,14 @@ const Header = styled.header`
 const List = styled.ul`
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
 `;
 
-const Item = styled.li``;
+const Item = styled.li`
+  font-size: ${props => (props.seleted ? "1.5rem" : "1rem")};
+  font-weight: ${props => (props.seleted ? "600" : "400")};
+`;
 
 export default withRouter(({ location: { pathname } }) => {
   return (
@@ -23,11 +27,8 @@ export default withRouter(({ location: { pathname } }) => {
         <Item seleted={pathname === "/"}>
           <Link to="/">Home</Link>
         </Item>
-        <Item seleted={pathname === "/"}>
-          <Link to="/">Home</Link>
-        </Item>
-        <Item seleted={pathname === "/"}>
-          <Link to="/">Home</Link>
+        <Item seleted={pathname === "/DeviceOrientation"}>
+          <Link to="/DeviceOrientation">DeviceOrientation</Link>
         </Item>
       </List>
     </Header>
