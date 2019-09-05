@@ -27,8 +27,11 @@ export default withRouter(({ location: { pathname } }) => {
         <Item seleted={pathname === "/"}>
           <Link to="/">Home</Link>
         </Item>
-        <Item seleted={pathname === "/DeviceOrientation"}>
-          <Link to="/DeviceOrientation">DeviceOrientation</Link>
+        <Item seleted={pathname === "/deviceorientation"}>
+          <Link to="/deviceorientation">DeviceOrientation</Link>
+        </Item>
+        <Item seleted={pathname === "/favicon"}>
+          <Link to="/favicon">Favicon</Link>
         </Item>
       </List>
     </Header>
